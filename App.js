@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   box1: {
-    display: 'flex',
+    display: 'fleX',
     width: "1000%" ,
     height: 80,
     backgroundColor: '#f00',
