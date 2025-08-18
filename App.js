@@ -1,35 +1,21 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import Header from "./src/components/Header";
+import Card from "./src/components/Card";
+import Footer from "./src/components/Footer";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <View style={styles.logo}></View>
-        <Text>Logo</Text>
-        <View style={styles.menu}></View>
-      </View>
+      <Header />
       <View style={styles.content}>
-        <View style={styles.card}>
-          <View style={styles.cardIcon}></View>
-          <View style={styles.cardContent}>
-            <Text style={styles.cardTitle}>Título</Text>
-            <Text style={styles.cardSubtitle}>conteudo--------------------------------------------------------------------------------------------------------------------------------</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <View style={styles.cardIcon}></View>
-          <View style={styles.cardContent}>
-            <Text style={styles.cardTitle}>Texto</Text>
-            <Text style={styles.cardSubtitle}>Texto2--------------------------------------------------------------------------------------------</Text>
-          </View>
-        </View>
+       
+        <Card />
+        
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Ver Mais</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Julio</Text>
-      </View>
+     <Footer />
     </View>
   );
 }
