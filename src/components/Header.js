@@ -1,23 +1,22 @@
 import { View, Text, StyleSheet } from "react-native";
+import { Image } from "expo-image"; 
+import { Entypo } from "@expo/vector-icons";
 
 function Header() {
   return (
- <View style={styles.header}>
-        <View style={styles.logo}></View>
-        <Text>Logo</Text>
-        <View style={styles.menu}></View>
-      </View>
-
+    <View style={styles.header}>
+      <Image
+        style={styles.logo}
+        source={require("../../assets/img/logo.svg")} 
+      />
+      <Text style={styles.logoText}>MovieKlyn</Text>
+      
+      <Entypo name="menu" size={32} color="#000" style={{ marginLeft: 10 }} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#3daff1",
-  },
   header: {
     flex: 1,
     width: "100%",
@@ -25,17 +24,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     paddingHorizontal: 20,
-    backgroundColor: "#3daf",
-  },
-  content: {
-    flex: 7,
-    width: "100%",
-    backgroundColor: "#3df",
+    backgroundColor: "#fff",
   },
   logo: {
     width: 40,
     height: 40,
-    backgroundColor: "#33a",
+    borderRadius: 5, 
   },
   logoText: {
     flex: 1,
@@ -46,20 +40,6 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     backgroundColor: "#33a",
-  },
- 
-  button: {
-    marginTop: 10,
-    alignSelf: "center",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    backgroundColor: "#33a",
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
   },
 });
 

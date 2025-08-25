@@ -1,33 +1,22 @@
-
 import { View, Text, StyleSheet } from "react-native";
+import { Image } from "expo-image";
 
-function Card() {
+function Card({ desc, img, titulo }) {
   return (
-    <View>
-        <View style={styles.card}>
-          <View style={styles.cardIcon}></View>
-          <View style={styles.cardContent}>
-            <Text style={styles.cardTitle}>Título</Text>
-            <Text style={styles.cardSubtitle}>conteudo--------------------------------------------------------------------------------------------------------------------------------</Text>
-          </View>
-        </View>
-  <View style={styles.card}>
-                  <View style={styles.cardIcon}></View>
-                  <View style={styles.cardContent}>
-                    <Text style={styles.cardTitle}>Texto</Text>
-                    <Text style={styles.cardSubtitle}>Texto2--------------------------------------------------------------------------------------------</Text>
-                  </View>
-                </View>
+    <View style={styles.card}>
+      <Image
+        style={styles.image}
+        source={img} 
+      />
+      <View style={styles.cardContent}>
+        <Text style={styles.cardTitle}>{titulo}</Text>
+        <Text>{desc}</Text>
+      </View>
     </View>
-
   );
 }
 
 const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    padding: 10,
-  },
   card: {
     flexDirection: "row",
     alignItems: "center",
@@ -42,23 +31,18 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
-  cardIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: "#33a",
-    marginRight: 10,
-  },
   cardContent: {
     flex: 1,
+    marginLeft: 10, 
   },
   cardTitle: {
     fontSize: 18,
     fontWeight: "bold",
   },
-  cardSubtitle: {
-    fontSize: 14,
-    color: "#555",
-    marginTop: 5,
+  image: {
+    width: 50, 
+    height: 50, 
+    borderRadius: 10, 
   },
 });
 

@@ -8,14 +8,22 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <View style={styles.content}>
-       
-        <Card />
+        <Card 
+          titulo="House of Dragons" 
+          desc="Guerra de dragão" 
+          img="https://wp.ufpel.edu.br/empauta/files/2022/09/Imagem-1-2.jpeg" 
+        />
+        <Card 
+          titulo="Lord of the Rings" 
+          desc="Batalha Contra Sauron" 
+          img="https://upload.wikimedia.org/wikipedia/pt/3/38/Lord_of_the_Rings_Fellowship_of_the_Ring.jpg" 
+        />
         
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Ver Mais</Text>
         </TouchableOpacity>
       </View>
-     <Footer />
+      <Footer />
     </View>
   );
 }
@@ -27,66 +35,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#3daff1",
   },
-  header: {
-    flex: 1,
-    width: "100%",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexDirection: "row",
-    paddingHorizontal: 20,
-    backgroundColor: "#3daf"
-  },
   content: {
     flex: 7,
     width: "100%",
-    backgroundColor: "#3df"
-  },
-  menu: {
-    width: 40,
-    height: 40,
-    backgroundColor: "#33a"
-  },
-  card: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 20,
-    marginVertical: 10,
-    marginHorizontal: 20,
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  cardIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: "#33a",
-    marginRight: 10,
-  },
-  cardContent: {
-    flex: 1,
-  },
-  cardTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  cardSubtitle: {
-    fontSize: 14,
-    color: "#555",
-    marginTop: 5,
-  },
-  footer: {
-    width: "100%",
-    padding: 20, 
-    backgroundColor: "#333",
-    alignItems: "center",
-  },
-  footerText: {
-    color: "#fff",
-    fontSize: 14,
+    backgroundColor: "#3df",
   },
   button: {
     marginTop: 10,
