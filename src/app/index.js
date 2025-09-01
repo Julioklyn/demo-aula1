@@ -1,12 +1,24 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Header from "./src/components/Header";
-import Card from "./src/components/Card";
-import Footer from "./src/components/Footer";
+import Header from "../components/Header";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
+import { Link } from "expo-router";
 
-export default function App() {
+export default function Home() {
   return (
     <View style={styles.container}>
       <Header />
+      
+      {}
+      <View style={styles.linksContainer}>
+        <Link href="contact">
+          <Text style={styles.linkText}>Contato</Text>
+        </Link>
+        <Link href="sobre">
+          <Text style={styles.linkText}>Sobre</Text>
+        </Link>
+      </View>
+
       <View style={styles.content}>
         <Card 
           titulo="House of Dragons" 
@@ -34,6 +46,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#3daff1",
+  },
+  linksContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "60%", // ajuste conforme desejar
+    marginVertical: 10,
+  },
+  linkText: {
+    fontSize: 18,
+    color: "#fff",
+    textDecorationLine: "underline",
   },
   content: {
     flex: 7,
