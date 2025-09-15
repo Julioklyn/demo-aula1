@@ -2,21 +2,16 @@ import { View, Text, Button, StyleSheet, TextInput } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
 
-
 export default function Signup() {
 
-
     const router = useRouter()
-
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [avatar, setAvatar] = useState('')
 
-
     const handleSignup = async () => {
-
 
         const profile = {
             name,
@@ -24,7 +19,6 @@ export default function Signup() {
             pass,
             avatar
         }
-
 
         const response = await fetch("http://localhost:3000/profile", {
             method: 'POST',
@@ -34,7 +28,6 @@ export default function Signup() {
             body: JSON.stringify(profile),
         })
 
-
         if (response.ok) {
             console.log('Cadastrado com sucesso')
         } else {
@@ -42,11 +35,9 @@ export default function Signup() {
         }
     }
 
-
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Cadastre-se</Text>
-
 
             <View style={styles.form}>
             <Text>Nome</Text>
@@ -75,9 +66,8 @@ export default function Signup() {
                 />
             </View>
 
-
             <View style={{ marginTop: 20 }}>
-                <Button
+                <Button 
                     title='Cadastrar'
                     onPress={handleSignup}
                 />
@@ -85,7 +75,6 @@ export default function Signup() {
         </View>
     )
 }
-
 
 const styles = StyleSheet.create({
     container: {

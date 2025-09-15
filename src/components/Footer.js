@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from 'react-native';
 
 function Footer() {
   return (
     <View style={styles.footer}>
-            <Text style={styles.footerText}>Julio</Text>
-          </View>
-  );
+        <Text style={styles.footerText}>&copy; Klyn</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -20,5 +20,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-
-export default Footer;
+export default Footer

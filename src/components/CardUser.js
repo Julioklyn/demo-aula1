@@ -1,17 +1,17 @@
 import { View, Text, StyleSheet,} from 'react-native';
 import {Image} from 'expo-image'
 
-function Card({ titulo, desc, img }) {
+function CardUser({ name, email, avatar }) {
     return (
         <View style={styles.card}>
             {/* <View style={styles.image}>as</View> */}
           <Image
             style={styles.image}
-            source={img}
+            source={avatar}
           />
             <View style={styles.text}>
-            <Text style={styles.cardText}>{titulo}</Text>
-          <Text style={styles.cardText2}>{desc}</Text>
+            <Text style={styles.cardText}>{name}</Text>
+          <Text style={styles.cardText2}>{email}</Text>
             </View>
         </View>
   )
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Card
+export default CardUser
